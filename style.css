@@ -21,13 +21,22 @@ background-color: aliceblue;
 h2 {
     padding-top: 20px;
     border-bottom: 20px;
+    text-decoration: underline;
+    box-decoration-break: underline;
+
 }
 
 #password {
     width: 960px;
     height: 120px;
     text-align: center;
+    border: dashed;
+    border-color: lightgrey;
+    box-decoration-break: underline;
+
 }
+
+
 
 button {
     background-color: rgb(211, 79, 79);
@@ -42,6 +51,7 @@ button {
 
 
 #generate {
+
 }
 
 #copy {
