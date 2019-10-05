@@ -1,24 +1,53 @@
-function GeneratePassword() {
-    var password = '';
-    var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-+';
-    for (i=74;i>=0;i--) {
-      var i = Math.floor(Math.random()*chars.length+Math.floor(Math.random()));
-      password = password + chars.charAt(i)
-    }
-    if (password.length >= 8) {
-        return password;
-    }
-    else if (password.length >=128 ){
-        return GeneratePassword();
-    }
-    else {
-        return GeneratePassword();
-    }
-};
-
-
 document.getElementById("generate").addEventListener("click", function(){
-    document.getElementById("password").innerText = GeneratePassword();});
+
+var Lowercase = "abcdefghijklmnopqrstuvwxyz";
+
+var Uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+var Numeric = "0123456789";
+
+var Speical = "!@#$%^&*()-+><?";
+
+var chars = '';
+
+var passlength = prompt("How Long Should You Password Be? (must be between 8 and 128 characters)");
+
+if (passlength < 8 || passlength >128) {
+    alert("must be between 8 and 128 characters");
+    prompt("How Long Should You Password Be? (must be between 8 and 128 characters)");
+} else {
+if (confirm("Do You Want Lowercase Characters in Your Password?")) {
+    var chars = chars.concat(Lowercase);
+} else {
+}
+    
+if (confirm("Do You Want Uppercase Characters in Your Password?")) {
+    var chars = chars.concat(Uppercase);
+} else {
+}
+    
+if (confirm("Do You Want Numeric Characters in Your Password")) {
+    var chars = chars.concat(Numeric);
+} else {
+}
+    
+if (confirm("Do You Want Speical Characters in Your Password?")) {
+    var chars = chars.concat(Speical);
+} else {
+} 
+
+function GeneratePassword() {
+    var password = "";
+    for (i=0;i<passlength;i++) {
+      password += chars.charAt(Math.floor(Math.random()*chars.length));
+      console.log(password);
+    }
+    return password;
+}
+document.getElementById("password").innerText = GeneratePassword();
+}
+}
+)
 
 
 document.getElementById("copy").addEventListener("click", function() {
