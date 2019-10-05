@@ -1,0 +1,49 @@
+h1 {
+text-align: center;
+position: static;
+}
+
+body {
+background-color: aliceblue;
+}
+
+.mainsection {
+    background-color: white;
+    width: 90%;
+    align-content: center;
+    max-width: auto;
+    max-height: auto;
+}
+* {
+    box-sizing: content-box;
+}
+
+h2 {
+    padding-top: 20px;
+    border-bottom: 20px;
+}
+
+#password {
+    width: 960px;
+    height: 120px;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(211, 79, 79);
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 48px;
+    padding: 12px;
+  }
+
+
+#generate {
+}
+
+#copy {
+    background-color: lightgray;
+}
